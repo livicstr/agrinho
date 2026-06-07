@@ -1,0 +1,370 @@
+/* GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+/* BODY */
+
+body{
+font-family:'Poppins', sans-serif;
+background:#f4f7f5;
+color:#222;
+overflow-x:hidden;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#d1fae5;
+}
+
+::-webkit-scrollbar-thumb{
+background:#166534;
+border-radius:10px;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+
+backdrop-filter:blur(10px);
+
+background:rgba(20, 83, 45, 0.85);
+
+padding:18px 50px;
+
+box-shadow:0 4px 20px rgba(0,0,0,0.2);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:white;
+font-size:26px;
+font-weight:700;
+letter-spacing:1px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:22px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+position:relative;
+transition:0.3s;
+}
+
+nav a::after{
+content:'';
+width:0%;
+height:2px;
+background:#86efac;
+
+position:absolute;
+left:0;
+bottom:-5px;
+
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=1400&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+
+animation:fadeUp 1.5s ease;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:25px;
+line-height:1.1;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+color:#e5e7eb;
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+
+padding:16px 35px;
+
+background:linear-gradient(45deg, #22c55e, #16a34a);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:0.4s;
+
+box-shadow:0 8px 20px rgba(34,197,94,0.4);
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+}
+
+/* SECTION */
+
+section{
+padding:110px 8%;
+position:relative;
+}
+
+/* TITLES */
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:48px;
+color:#14532d;
+margin-bottom:15px;
+position:relative;
+display:inline-block;
+}
+
+.section-title h2::after{
+content:'';
+
+width:60%;
+height:4px;
+
+background:#22c55e;
+
+position:absolute;
+
+left:20%;
+bottom:-10px;
+
+border-radius:10px;
+}
+
+/* TEXT */
+
+.text-section{
+max-width:1100px;
+margin:auto;
+
+background:white;
+
+padding:40px;
+
+border-radius:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+font-size:18px;
+
+line-height:2;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+
+grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+
+gap:30px;
+}
+
+.card{
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+transition:0.4s;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card::before{
+content:'';
+
+position:absolute;
+
+width:100%;
+height:7px;
+
+background:linear-gradient(to right, #22c55e, #0ea5e9);
+
+top:0;
+left:0;
+}
+
+.card:hover{
+transform:translateY(-12px);
+}
+
+.card h3{
+color:#166534;
+margin-bottom:15px;
+font-size:24px;
+}
+
+.card p{
+line-height:1.8;
+}
+
+/* BACKGROUNDS */
+
+.consumo{
+background:linear-gradient(to bottom, #ecfccb, #f0fdf4);
+}
+
+.sustentabilidade{
+background:linear-gradient(to bottom, #dcfce7, #f0fdf4);
+}
+
+.solucoes{
+background:linear-gradient(to bottom, #cffafe, #ecfeff);
+}
+
+/* FOOTER */
+
+footer{
+background:#14532d;
+color:white;
+text-align:center;
+padding:50px 20px;
+}
+
+footer p{
+margin-bottom:10px;
+}
+
+footer a{
+color:#86efac;
+text-decoration:none;
+}
+
+/* ANIMAÇÕES */
+
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:all 1s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+header{
+padding:20px;
+}
+
+nav{
+flex-direction:column;
+gap:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-title h2{
+font-size:36px;
+}
+
+.text-section{
+padding:30px;
+}
+
+}
